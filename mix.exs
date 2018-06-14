@@ -5,19 +5,19 @@ defmodule Tirexs.Mixfile do
     [
       app: :tirexs,
       name: "Tirexs",
-      version: "0.8.10",
-      source_url: github,
-      homepage_url: github,
-      elixir: "~> 1.3.0",
-      description: description,
-      package: package,
-      deps: deps,
+      version: "0.8.11",
+      source_url: github(),
+      homepage_url: github(),
+      elixir: "~> 1.5.0",
+      description: description(),
+      package: package(),
+      deps: deps(),
       docs: [extras: ["README.md", "CONTRIBUTING.md"]]
     ]
   end
 
   def application do
-    [ applications: [:exjsx, :inets], env: env ]
+    [ applications: [:exjsx, :inets], env: env() ]
   end
 
   defp env do
@@ -25,7 +25,7 @@ defmodule Tirexs.Mixfile do
   end
 
   defp deps do
-    [ {:exjsx, "~> 3.2.0"}, {:ex_doc, "~> 0.12", only: :dev}, {:earmark, "~> 1.0", only: :dev} ]
+    [ {:exjsx, "~> 4.0.0"}, {:ex_doc, "~> 0.18", only: :dev}, {:earmark, "~> 1.2", only: :dev} ]
   end
 
   defp description do
@@ -38,7 +38,7 @@ defmodule Tirexs.Mixfile do
     [
       maintainers: ["Aleksey Zatvobor"],
       licenses: ["Apache 2.0"],
-      links: %{"GitHub" => github, "Contributors" => contributors, "Issues" => issues}
+      links: %{"GitHub" => github(), "Contributors" => contributors(), "Issues" => issues()}
     ]
   end
 
